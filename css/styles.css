@@ -1,0 +1,17 @@
+body{
+	background-image: url('../images/debut_dark.png');
+}
+
+#search-items{
+	width: 550px;
+	margin: 0 auto;
+	padding-top: 200px;
+}
+
+#headline{
+	background-image: url('../images/head-bg.jpg');
+	background-repeat: no-repeat;
+	background-color: #841212;
+	height: 400px;
+	box-shadow: 1px 3px 2px #302F2F;
+}
