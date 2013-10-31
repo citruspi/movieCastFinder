@@ -5,6 +5,8 @@ include('config.php');
 function getResults($movie1,$movie2){
 
 			// Connection stuff
+			
+			global $API_KEY;
 
 			$q1 = urlencode($movie1); // make sure to url encode an query parameters
 			$oneEndpoint = 'http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=' . $API_KEY . '&q=' . $q1;
