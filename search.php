@@ -1,18 +1,20 @@
 <?php
 
+include('config.php');
+
 function getResults($movie1,$movie2){
 
 			// Connection stuff
-			$apikey = 'API KEY HERE';
+
 			$q1 = urlencode($movie1); // make sure to url encode an query parameters
-			$oneEndpoint = 'http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=' . $apikey . '&q=' . $q1;
+			$oneEndpoint = 'http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=' . $API_KEY . '&q=' . $q1;
 			$session1 = curl_init($oneEndpoint);
 			curl_setopt($session1, CURLOPT_RETURNTRANSFER, true);
 			$data1 = curl_exec($session1);
 			curl_close($session1);
 
 			$q2 = urlencode($movie2); // make sure to url encode an query parameters
-			$oneEndpoint = 'http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=' . $apikey . '&q=' . $q2;
+			$oneEndpoint = 'http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=' . $API_KEY . '&q=' . $q2;
 			$session2 = curl_init($oneEndpoint);
 			curl_setopt($session2, CURLOPT_RETURNTRANSFER, true);
 			$data2 = curl_exec($session2);
